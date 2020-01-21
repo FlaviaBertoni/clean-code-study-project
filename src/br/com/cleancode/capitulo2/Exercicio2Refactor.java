@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Contexto implícito, dificulta o entendimento, para entender esse código
+ * Contexto implícito dificulta o entendimento, para entender esse código
  * tenho que saber:
  * 
  * - O que está na theList (tabuleiro do campo minado)
@@ -20,7 +20,7 @@ public class Exercicio2Refactor {
     private static final int STATUS = 0;
     private static final int FLAGGED_CELL = 4;
 
-    public int[] cell;
+    int[] cell;
 
     public Boolean isFlagged() {
       return this.getStatus() == FLAGGED_CELL;
