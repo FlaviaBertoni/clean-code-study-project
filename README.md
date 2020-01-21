@@ -15,5 +15,6 @@ Projeto com o intuito de praticar as refatorações / exercícios sugeridos no l
 - Exercício 3
 
 ###### Use nomes pronunciáveis
+- Exercício 4
 
 ###### Use nomes passíveis de busca
