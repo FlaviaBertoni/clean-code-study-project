@@ -32,8 +32,6 @@ O nome de uma váriavel deve dizer seu propósito (porque ela existe)
 
 **Evite informações erradas**
 
-Letras e nomes que podem confundir devem ser evitadas, como o número "1" e a letra "l" ou o número "0" e a letra "O" (uma solução mais simples que mudança de fonte seria simplemeste renomear as variáveis) ou palavras muito parecidas ou que tenham outros significados.
-
 **Faça distinções significativas**
  
  Nomes sequencias (a1 .. aN) não dizem nada.
@@ -51,8 +49,6 @@ Letras e nomes que podem confundir devem ser evitadas, como o número "1" e a le
 **Use nomes pronunciáveis**
 
  Nomes pronunciáveis são importantes para facilitar a comunicação.
- 
- A variável **genymdhms** do exercicío 4 é difícil de falar *"gen ipslon eme dê agá eme esse"* e entender o significado *(generation date, year, month, day, hour, minute e second)*.
 
 > Se pessoas novas precisam pedir para explicar o significado dos nomes é um forte indício que são nomes de baixa qualidade, seria mais simples e barato usar palavras que já existem na língua
  
@@ -64,8 +60,40 @@ Letras e nomes que podem confundir devem ser evitadas, como o número "1" e a le
 
 > Escrever nomes pensando em como o buscaria
 
-Se usar um número como no exemplo o "5" para os dias de trabalho na semana ao envez de WORK_DAYS_PER_WEEK, além de ser complicado saber o significado, fica difícil de encontrar no arquivo e ainda mais no projeto onde essa informação é usada claramente, o mesmo vale para letras.
-
 - Exercício 5:
 [Original](/src/br/com/cleancode/capitulo2/Exercicio5.java) -
 [Refatorado](/src/br/com/cleancode/capitulo2/Exercicio5Refactor.java)
+
+**Evite codificações**
+
+> "Codificar informações do escopo ou tipos em nomes simplesmente adiciona uma tarefa extra de decodificação... É uma sobrecarga mental desnecessária ao tentar resolver um problema."
+
+**Evite o mapeamento mental**
+
+Evitar que as pessoas tenham que fazer traduções mentais de nomes escolhidos para os conhecidos.
+
+> Usar termo de domínio do problema e da solução.
+
+> "*Clareza é fundamental*. Os profissionais usam seus poderes para o bem e escrevem códigos que outros possam entender."
+
+**Nomes de classes**
+
+Classes e objetos devem ter nomes com substantivo(s), evitar palavras que podem ser tanto substantivo quanto verbo, exemplo: Manager.
+
+**Nomes de métodos**
+
+Devem ser verbos.
+
+Padrão javabean `get`, `set` e `is` + valor
+
+Usar factory methods estáticos com nomes que descrevem os pârametros quando os construtores da classe estiverem sobrecarregados. Para forçar o uso da factory deixar os contrutores correspondentes como privados.
+
+``` 
+Complex fulcrumPoint = Complex.FromRealNumber(23.0); 
+
+// Melhor que:
+
+Complex fulcrumPoint = new Complex(23.0);
+
+``` 
+
